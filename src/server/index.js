@@ -17,8 +17,8 @@ import * as state from './lib/oauth/state-handler'
 
 // To work properly in production with OAuth providers the NEXTAUTH_URL
 // environment variable must be set.
-if (!process.env.NEXTAUTH_URL) {
-  logger.warn('NEXTAUTH_URL', 'NEXTAUTH_URL environment variable not set')
+if (!process.env.NEXTAUTH_URL && !process.env.NEXT_PUBLIC_NEXTAUTH_URL) {
+  logger.warn('NEXTAUTH_URL', 'neither NEXTAUTH_URL nor NEXT_PUBLIC_NEXTAUTH_URL environment variable is correctly set')
 }
 
 /**
@@ -57,7 +57,7 @@ async function NextAuthHandler (req, res, userOptions) {
     } = req.query
 
     // @todo refactor all existing references to baseUrl and basePath
-    const { basePath, baseUrl } = parseUrl(process.env.NEXTAUTH_URL || process.env.VERCEL_URL)
+    const { basePath, baseUrl } = parseUrl(process.env.NEXTAUTH_URL || process.env.VERCEL_URL || process.env.NEXT_PUBLIC_NEXTAUTH_URL)
 
     const cookies = {
       ...cookie.defaultCookies(userOptions.useSecureCookies || baseUrl.startsWith('https://')),
