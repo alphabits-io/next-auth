@@ -1,10 +1,10 @@
 {
-  "name": "next-auth",
+  "name": "onrender-next-auth",
   "version": "0.0.0-semantically-released",
-  "description": "Authentication for Next.js",
-  "homepage": "https://next-auth.js.org",
-  "repository": "https://github.com/nextauthjs/next-auth.git",
-  "author": "Iain Collins <me@iaincollins.com>",
+  "description": "Authentication for Next.js deployed Onrender",
+  "homepage": "https://github.com/alphabits-io/next-auth",
+  "repository": "https://github.com/alphabits-io/next-auth.git",
+  "author": "Kaustubh Bhardwaj",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:js && npm run build:css",
