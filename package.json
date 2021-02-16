@@ -1,6 +1,6 @@
 {
-  "name": "onrender-next-auth",
-  "version": "0.0.0-semantically-released",
+  "name": "@alphabits-io/onrender-next-auth",
+  "version": "0.1.0",
   "description": "Authentication for Next.js deployed Onrender",
   "homepage": "https://github.com/alphabits-io/next-auth",
   "repository": "https://github.com/alphabits-io/next-auth.git",
